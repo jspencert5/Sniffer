@@ -1,1 +1,13 @@
 node_modules/
+Module/.keyLogger.ko.cmd
+Module/.keyLogger.mod.cmd
+Module/.keyLogger.mod.o.cmd
+Module/.keyLogger.o.cmd
+Module/.Module.symvers.cmd
+Module/.modules.order.cmd
+Module/keyLogger.mod
+Module/keyLogger.mod.c
+Module/keyLogger.mod.o
+Module/keyLogger.o
+Module/Module.symvers
+Module/modules.order

